@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Record Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <h2>🎓 StudentHub</h2>
+
+    <nav>
+      <a class="active" href="#">Dashboard</a>
+      <a href="#add-student">Add Student</a>
+      <a href="#records">Student Records</a>
+    </nav>
+
+    <p class="sidebar-footer">Student Management System</p>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">STUDENT MANAGEMENT</p>
+        <h1>Dashboard</h1>
+        <p class="subtitle">Manage your student records in one place.</p>
+      </div>
+      <div class="profile">Admin</div>
+    </header>
+
+    <section class="welcome-card">
+      <div>
+        <p class="eyebrow light">WELCOME BACK!</p>
+        <h2>Student Record Manager</h2>
+        <p>Add and manage student information easily.</p>
+      </div>
+      <div class="welcome-icon">📚</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span class="stat-icon">👨‍🎓</span>
+        <p>Total Students</p>
+        <h2 id="studentCount">0</h2>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-icon">📝</span>
+        <p>System Status</p>
+        <h2 class="status">Ready</h2>
+      </div>
+    </section>
+
+    <section class="panel" id="add-student">
+      <div class="section-heading">
+        <div>
+          <h2>Add New Student</h2>
+          <p>Enter the student's details below.</p>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">Student Name</label>
+          <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter student name"
+                  maxlength="100"
+          >
+        </div>
+
+        <div class="field">
+          <label for="age">Student Age</label>
+          <input
+                  type="number"
+                  id="age"
+                  placeholder="Enter age"
+                  min="1"
+                  max="120"
+          >
+        </div>
+      </div>
+
+      <button class="primary-btn" onclick="addStudent()">
+        + Add Student
+      </button>
+    </section>
+
+    <section class="panel" id="records">
+      <div class="section-heading">
+        <div>
+          <h2>Student Records</h2>
+          <p>Students added during this session.</p>
+        </div>
+      </div>
+
+      <ul id="studentList" class="student-list">
+        <li class="empty-state">
+          No students displayed yet. Add a student to get started.
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      StudentHub · Built with HTML, CSS, Java, JDBC and MySQL
+    </footer>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
